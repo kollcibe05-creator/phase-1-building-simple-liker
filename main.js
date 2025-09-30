@@ -4,6 +4,27 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+let hearts = document.querySelectorAll('.like-glyph')
+function likeManipulation () {
+hearts.forEach(heart  => heart.addEventListener('click', () => {
+toggleButton()
+}))}
+
+function serverCall() {
+  mimicServerCall()
+  .then( () => {console.log('success')
+   likeManipulation()}
+  ) 
+  .catch(setTimeout(() => {
+    document.getElementsByClassName('hidden').className = 'none'},3000))
+
+}
+function toggleButton() {
+hearts.classList.toggle('activated-heart')
+}
+
+
+
 
 
 
